@@ -43,7 +43,6 @@ bot.on("message", async (msg) => {
         { value: JSON.stringify({name, chatId, message, userId }) }
       ]
     })
-    // Prepare the topic to send to the Sentiment Analysis Microservice
     await producer.disconnect();
   }
 });
