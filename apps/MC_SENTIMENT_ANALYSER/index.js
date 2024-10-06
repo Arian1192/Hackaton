@@ -25,9 +25,6 @@ const run = async () => {
       const {name, userId, chatId, message: telegramMessage } = JSON.parse(message.value.toString());
       const sentiment = await pipe(telegramMessage);
 
-      // si el mensaje tiene un sentimient negativo mandariamos un mensaje a un topic de kafka
-      // devuelta a al bot de telegram para indicarle a todos los usuarios excepto el que lo manda
-      // que el mensaje tiene un sentimiento negativo.
       if(sentiment[0].label === "NEGATIVE"){
         const producer = kafka.producer()
         await producer.connect()
@@ -44,7 +41,7 @@ const run = async () => {
           ]
         })
       }
-      console.log(sentiment) // asegúrate de usar await aquí si pipe devuelve una promesa
+      console.log(sentiment)
       console.log(
         `Received message: ${telegramMessage} with sentiment: ${sentiment[0].label}`
       )
