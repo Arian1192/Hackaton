@@ -25,7 +25,7 @@ El objetivo de la hackatón es crear una herramienta que permita a los administr
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/hackathon-telegram-bot.git
+   git clone https://github.com/Arian1192/Hackaton.git hackathon-telegram-bot
    cd hackathon-telegram-bot
 
    ```
