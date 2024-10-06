@@ -1,0 +1,24 @@
+{
+  "name": "personal_hackaton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "start:telegram_bot": "node ./apps/TELEGRAM_BOT/index.js",
+    "start:sentiment_analysis": "node ./apps/MC_SENTIMENT_ANALYSER/index.js",
+    "dev:both": "concurrently --kill-others \"npm run start:telegram_bot\" \"npm run start:sentiment_analysis\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.0.1",
+    "dotenv": "^16.4.5",
+    "kafkajs": "^2.2.4",
+    "nodemon": "^3.1.7"
+  }
+}
