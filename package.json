@@ -8,7 +8,8 @@
   "scripts": {
     "start:telegram_bot": "node ./apps/TELEGRAM_BOT/index.js",
     "start:sentiment_analysis": "node ./apps/MC_SENTIMENT_ANALYSER/index.js",
-    "dev:both": "concurrently --kill-others \"npm run start:telegram_bot\" \"npm run start:sentiment_analysis\"",
+    "start:react-app": "cd ./apps/Frontend_App && npm run dev",
+    "dev:both": "concurrently --kill-others \"npm run start:telegram_bot\" \"npm run start:sentiment_analysis\" \"npm run start:react-app\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +20,10 @@
     "concurrently": "^9.0.1",
     "dotenv": "^16.4.5",
     "kafkajs": "^2.2.4",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.12"
   }
 }

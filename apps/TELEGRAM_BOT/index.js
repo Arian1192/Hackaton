@@ -16,8 +16,8 @@ const kafka = new Kafka({
 
 const producer = kafka.producer();
 const consumer = kafka.consumer({
-  groupId: 'sentiment-analysis-group-2'
-})
+  groupId: 'sentiment-analysis-group'
+});
 
 bot.on("message", async (msg) => {
   /**
@@ -66,7 +66,6 @@ const run = async () => {
      console.log(userId, chatId, telegramMessage)
      const users = await bot.getChatAdministrators(chatId);
       const otherAdmins = users.filter(user => user.user.id !== userId);
-      console.log(otherAdmins)
       bot.sendMessage(userId, `Please ${name} be careful with the messages you send. `)
       for (let i = 0; i < otherAdmins.length; i++ ){
         if(otherAdmins[i].user.is_bot) return
