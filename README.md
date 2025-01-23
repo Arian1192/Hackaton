@@ -15,8 +15,8 @@ El objetivo de la hackatón es crear una herramienta que permita a los administr
 
 ## Requisitos
 
-- **Node.js** >= versión X.X
-- **Kafka** >= versión X.X
+- **Node.js** >= versión x.x
+- **Kafka** >= versión x.x
 - **Docker** (opcional para desplegar Kafka y Zookeeper)
 - **Librería @xenova/transformers** para el análisis de sentimientos.
 
